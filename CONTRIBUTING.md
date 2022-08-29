@@ -36,29 +36,3 @@ git push origin feat/add-edit-product
 2. Go to "Pull requests", and choose your commit from list.
 3. Go to "Files changed" to check code is fine.
 4. Go back to "Conversation" and click "Merge pull request" and then "Comfirm merge" button 
-
-
-
-
-
-
-
-
-
-1. Swich to your local dev branch
-```
-git checkout dev
-```
-2. Merge your feature branch into the dev branch
-```
-git merge feat/add-edit-product
-```
-The name of the branch is whatever your feature branch name is
-
-3. Commit and push your code to the remote dev branch:
-```
-git add -A
-git commit -m "Implemented add/edit functionality"
-git push origin dev
-```
-4. Make a pull request.
