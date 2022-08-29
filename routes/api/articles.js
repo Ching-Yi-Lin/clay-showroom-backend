@@ -6,6 +6,7 @@ var Article = mongoose.model('Article');
 router.param('article', function (req, res, next, id) {
   Article.findById(id)
     .then(function (article) {
+      //return 404 not found if there's no article in db
       if (!article) { return res.sendStatus(404); }
 
       req.article = article;
