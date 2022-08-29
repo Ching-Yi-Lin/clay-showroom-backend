@@ -20,20 +20,19 @@ git checkout -b feat/add-edit-product
 ---
 
 ## How to contribute to the remote repository (on Github)
-1. Swich to your local dev branch
-```
-git checkout dev
-```
-2. Merge your feature branch into the dev branch
-```
-git merge feat/add-edit-product
-```
-The name of the branch is whatever your feature branch name is
 
-3. Commit and push your code to the remote dev branch:
+1. When you finish with your feature, create a branch on Gihub from it:
 ```
-git add -A
-git commit -m "Implemented add/edit functionality"
-git push origin dev
+git add -A 
+git commit -m "Added a new form for creating a product"
+git push origin feat/add-edit-product
 ```
-4. Make a pull request.
+2. Let a team member know that you have made a pull request by copying the pull request URL and sending it to your team members.
+
+## Merging someone else's pull request
+
+1. When you go to Github you'll see a message "feat/add-edit-product" had recent pushes. You should click on "Compaire$pull request" button. Then choose "base:dev" frm the dropdown box.
+
+2. Go to "Pull requests", and choose your commit from list.
+3. Go to "Files changed" to check code is fine.
+4. Go back to "Conversation" and click "Merge pull request" and then "Comfirm merge" button 
