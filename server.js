@@ -18,6 +18,7 @@ app.use(bodyParser.json());
 // Models
 require("./models/Article");
 require("./models/User");
+require("./models/Product");
 
 // Routes
 app.use(require("./routes"));
