@@ -16,7 +16,6 @@ UserSchema.methods.toJSON = function () {
     firstName: this.firstName,
     lastName: this.lastName,
     email: this.email,
-    password: this.password,
     createdAt: this.createdAt,
     updatedAt: this.updatedAt,
   };
