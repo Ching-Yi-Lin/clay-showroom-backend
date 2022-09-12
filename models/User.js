@@ -2,8 +2,7 @@ var mongoose = require("mongoose");
 
 var UserSchema = new mongoose.Schema(
   {
-    firstName: String,
-    lastName: String,
+    fullName: String,
     email: String,
     password: String,
   },
@@ -13,8 +12,8 @@ var UserSchema = new mongoose.Schema(
 UserSchema.methods.toJSON = function () {
   return {
     id: this._id,
-    firstName: this.firstName,
-    lastName: this.lastName,
+
+    fullName: this.fullName,
     email: this.email,
     createdAt: this.createdAt,
     updatedAt: this.updatedAt,
