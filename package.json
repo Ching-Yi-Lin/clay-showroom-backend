@@ -11,8 +11,9 @@
   "author": "Richard Lovell <richjavalabs@gmail.com> (http://richjava.github.io)",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2",
+    "cors": "^2.8.5",
     "dotenv": "^4.0.0",
+    "express": "^4.16.2",
     "mongoose": "^5.3.16",
     "mongoose-unique-validator": "^2.0.2",
     "slug": "^0.9.3"
