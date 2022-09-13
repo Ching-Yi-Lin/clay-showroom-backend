@@ -72,6 +72,22 @@ router.post("/", function (req, res, next) {
 });
 
 /**
+ * Login User.
+ * /api/users/login
+ */
+router.post("/login", async function (req, res, next) {
+  var user = await User.findOne({
+    email: req.body.email,
+    password: req.body.password,
+  });
+  if (!user) {
+    return res.sendStatus(401);
+  }
+
+  return res.json({ user: user.toJSON() });
+});
+
+/**
  * Update an User. /api/users/:userId
  */
 router.put("/:user", function (req, res, next) {
