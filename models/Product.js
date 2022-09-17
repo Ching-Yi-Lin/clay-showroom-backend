@@ -4,6 +4,7 @@ var ProductSchema = new mongoose.Schema(
   {
     name: String,
     description: String,
+    category: String,
     price: Number,
     user: {type: mongoose.Schema.Types.ObjectId, ref: "User"},
     imageUrl: String,
@@ -16,11 +17,13 @@ ProductSchema.methods.toJSON = function () {
     id: this._id,
     name: this.name,
     description: this.description,
+    category: this.category,
     price: this.price,
     imageUrl: this.imageUrl,
     updatedAt: this.updatedAt,
   }
-  if(product.user && product.user.id){
+  
+  if(this.user && this.user.id){
     product.user = this.user.toJSON();
   }
   return product;
