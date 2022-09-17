@@ -38,6 +38,7 @@ router.get("/", function (req, res, next) {
 
   return Promise.all([
     Product.find(query)
+    .populate("user")
       .limit(Number(limit))
       .skip(Number(offset))
       .sort({ createdAt: "desc" })
@@ -96,6 +97,10 @@ router.put("/:product", function (req, res, next) {
   
   if (typeof req.body.imageUrl !== "undefined") {
     req.product.imageUrl = req.body.imageUrl;
+  }
+
+  if (typeof req.body.category !== "undefined") {
+    req.product.category = req.body.category;
   }
 
   req.product
