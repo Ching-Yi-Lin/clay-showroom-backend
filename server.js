@@ -11,7 +11,7 @@ var isProduction = process.env.NODE_ENV === "production";
 
 // Create global app object
 var app = express();
-var whitelist = ["http://localhost:3000"]; //white list consumers
+var whitelist = ["http://localhost:3000", "http://localhost:3001", "http://localhost:3002"]; //white list consumers
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
